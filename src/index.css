@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root[data-theme="light"] {
+    --background: 226 232 240;
+    --primary: 30 41 59;
+    --secondary: 2 6 23;
+    --gradient-start: 148 163 184;
+    --gradient-stop: 100 116 139;
+    --not-found: 0 0 0;
+    --alpha-value: 0.2;
+  }
+  :root[data-theme="dark"] {
+    --background: 2 6 23;
+    --primary: 30 41 59;
+    --secondary: 255 255 255;
+    --gradient-start: 51 59 71;
+    --gradient-stop: 81 99 120;
+    --not-found: 255 255 255;
+    --alpha-value: 0.2;
+  }
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+  .scroll-none::-webkit-scrollbar {
+    display: none;
+  }
+}
