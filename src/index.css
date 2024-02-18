@@ -26,6 +26,12 @@
   * {
     font-family: "Poppins", sans-serif;
   }
+  html::-webkit-scrollbar {
+    width: 5px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: #001845;
+  }
   .scroll-none::-webkit-scrollbar {
     display: none;
   }
