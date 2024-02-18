@@ -9,7 +9,6 @@ import Mist from "../assets/weather/mist.png";
 import Rain from "../assets/weather/rain.png";
 import Snow from "../assets/weather/snow.png";
 import Wind from "../assets/weather/wind.png";
-import { CiTrophy } from "react-icons/ci";
 
 interface ForecaseType {
   list: ForecastType[];
