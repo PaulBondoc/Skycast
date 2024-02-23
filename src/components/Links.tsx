@@ -18,7 +18,7 @@ const Links = () => {
     <>
       <div className="flex gap-5 mt-3">
         {links.map((item: Links, index: number) => (
-          <a key={index} href={item.link}>
+          <a key={index} href={item.link} target="_blank">
             <item.Icon className="text-[30px]" />
           </a>
         ))}
