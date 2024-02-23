@@ -22,6 +22,7 @@ import SunAndClouds from "./components/SunAndClouds";
 import TodaysForecast from "./components/TodaysForecast";
 import NotFound from "./components/NotFound";
 import Loader from "./components/Loader";
+import SmallScreenSearchBar from "./components/SmallScreenSearchBar";
 
 function App() {
   const [weatherData, setWeatherData] = useState<WeatherDataType>();
@@ -84,6 +85,8 @@ function App() {
           />
 
           <main className="min-h-[80vh] px-3 sm:px-5 pb-3 sm:pb-5">
+            <SmallScreenSearchBar onSearch={setCity} />
+
             {isNotFound ? (
               <NotFound />
             ) : (

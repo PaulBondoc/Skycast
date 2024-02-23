@@ -2,13 +2,7 @@ import { BackgroundStyle } from "../lib/types";
 import { useState, useEffect } from "react";
 import { fetchFiveDaysForeCast } from "../services/apiService";
 import { mps_to_kmh } from "../utils/conversionUtils";
-import Clear from "../assets/weather/clear.png";
-import Clouds from "../assets/weather/clouds.png";
-import Drizzle from "../assets/weather/drizzle.png";
-import Mist from "../assets/weather/mist.png";
-import Rain from "../assets/weather/rain.png";
-import Snow from "../assets/weather/snow.png";
-import Wind from "../assets/weather/wind.png";
+import { getWeatherImage } from "../utils/weathericonUtils";
 
 interface WeatherData {
   weekDayName: string;
@@ -210,27 +204,6 @@ const FiveDaysForecast = (props: Props) => {
       </div>
     </>
   );
-};
-
-const getWeatherImage = (weatherStatus: string): string => {
-  switch (weatherStatus) {
-    case "Clear":
-      return Clear;
-    case "Clouds":
-      return Clouds;
-    case "Drizzle":
-      return Drizzle;
-    case "Mist":
-      return Mist;
-    case "Rain":
-      return Rain;
-    case "Snow":
-      return Snow;
-    case "Wind":
-      return Wind;
-    default:
-      return "";
-  }
 };
 
 export default FiveDaysForecast;
